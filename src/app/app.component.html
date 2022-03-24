@@ -1,0 +1,38 @@
+<div>
+  <div>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="../assets/images/lion.jpg" width="75px" height="75px"/>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+      
+            <div class="collapse navbar-collapse" id="navbarColor02">
+                <ul class="navbar-nav me-auto">
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a routerLink="posts" class="nav-link">Posts</a>
+                  </li>
+                  <li class="nav-item">
+                    <a routerLink="add" class="nav-link">Add</a>
+                  </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</div>
+  
+<div style="text-align:center">
+    <h1>Welcome to {{ title }}</h1>
+    <p>In this web app you will be able to <em>create</em>, <em>add</em>, 
+      <em>search</em>, <em>edit</em>, and <em>delete</em> your posts.</p>
+</div>
+
+  <div class="container mt-3">
+    <router-outlet></router-outlet>
+  </div>
+</div>

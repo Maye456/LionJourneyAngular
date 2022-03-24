@@ -1,0 +1,41 @@
+<div class="list row">
+    <div class="col-md-8">
+      <div class="input-group mb-3">
+        <input
+          type="text"
+          class="form-control"
+          placeholder="Search by title"
+          [(ngModel)]="title"
+        />
+        <div class="input-group-append">
+          <button
+            class="btn btn-outline-secondary"
+            type="button"
+            (click)="searchTitle()"
+          >
+            Search
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <h4>Posts List</h4>
+      <ul class="list-group">
+        <li
+          class="list-group-item"
+          *ngFor="let post of posts; let i = index"
+          [class.active]="i == currentIndex"
+          (click)="setActivePost(post, i)"
+        >
+          {{ post.title }}
+        </li>
+      </ul>
+
+    </div>
+    <div class="col-md-6">
+      <app-post-details
+        [viewMode]="true"
+        [currentPost]="currentPost"
+      ></app-post-details>
+    </div>
+  </div>
